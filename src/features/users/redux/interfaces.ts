@@ -1,8 +1,13 @@
 export interface State {
-    models: Model[]
+    users: Array<User>,
+    user?: User,
+    userInput?: number
 }
 
-export interface Model {
-    id: string,
-    property: string
+export interface User {
+    id: string
+    name: string
+    email: string
+    gender: string
+    status: string
 }

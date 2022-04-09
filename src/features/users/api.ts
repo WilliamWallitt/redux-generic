@@ -1,5 +1,5 @@
 import {Api, REST} from "../../api/Api";
-import {Model} from "./redux/interfaces";
+import {User} from "./redux/interfaces";
 
 
 class API<Model extends {id: string}> extends REST<Model>{
@@ -11,4 +11,4 @@ class API<Model extends {id: string}> extends REST<Model>{
 
 }
 
-export const endpoint = new API<Model>("/")
+export const endpoint = new API<User>("https://gorest.co.in/public/v2/users")
