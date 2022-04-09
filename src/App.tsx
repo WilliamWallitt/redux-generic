@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import {Users} from "./features/users/users";
-import {Component} from "./features/generic/component";
+import {Users} from "./components/users/users";
+import {Component} from "./components/generic/component";
 
 function App() {
   return (
