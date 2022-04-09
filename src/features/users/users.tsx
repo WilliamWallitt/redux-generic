@@ -3,7 +3,7 @@ import {setUserInput, getEntireState, getState, getUser} from "./redux/redux";
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import "./styles.css"
 
-export const Component = () => {
+export const Users = () => {
 
     // lets get some part / all of our state (this is NOT a static thing, updates when we dispatch a command that changes it)
     const state = useAppSelector(getEntireState)
@@ -19,14 +19,14 @@ export const Component = () => {
     }, [])
 
     useEffect(() => {
-        console.log(state.userInput)
+        console.log(state, "STATE")
     })
 
     return (
 
-        <div style={{display: "flex", border: "3px dotted black", backgroundColor: "black", color: "white", flexWrap: "wrap"}}>
-            <div style={{display: "flex", flexDirection: "column", width: "50%"}}>
-                <div>
+        <div style={{display: "flex", flexDirection: "row", border: "3px dotted black", backgroundColor: "black", color: "white", flexWrap: "wrap"}}>
+            <div style={{display: "flex", flexDirection: "column", width: "100%"}}>
+                <div style={{alignSelf: "center"}}>
                     <h1>Find a user (id)</h1>
                     <p>Yes you can build a dropdown, but im lazy</p>
                     <input type={"number"} onChange={(e) => updateUserInput(parseInt(e.target.value))}/>

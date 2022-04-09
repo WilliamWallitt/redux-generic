@@ -16,6 +16,10 @@ export const Component = () => {
         dispatch(getState())
     }, [])
 
+    useEffect(() => {
+        console.log(state, "STATE")
+    })
+
     return (
         <div>
             <h1>I'm a connected component :)</h1>

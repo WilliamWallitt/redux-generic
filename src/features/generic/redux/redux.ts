@@ -38,7 +38,7 @@ export const getState = createAsyncThunk(
 export const {action} = stateSlice.actions;
 
 // get part/all of our state, think of this as map state to props
-export const getEntireState = (state: RootState) => state;
+export const getEntireState = (state: RootState) => state.state;
 
 // export our reducer
 export default stateSlice.reducer;
